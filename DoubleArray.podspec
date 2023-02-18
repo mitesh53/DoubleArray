@@ -13,8 +13,8 @@ This CocoaPods library helps you perform calculation.
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "miteshRtahore" => "miteshrathore53@gmail.com" }
 
-  spec.ios.deployment_target = "12.1"
-  spec.swift_version = "4.2"
+  spec.ios.deployment_target = "14.0"
+  spec.swift_version = "5.0"
 
   spec.source        = { :git => "https://github.com/mitesh53/DoubleArray.git", :tag => "#{spec.version}" }
   spec.source_files  = "DoubleArray/**/*.{h,m,c,swift}"
