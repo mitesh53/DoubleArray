@@ -15,4 +15,11 @@ FOUNDATION_EXPORT const unsigned char DoubleArrayVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DoubleArray/PublicHeader.h>
 
+#ifndef DoubleArray_h
+#define DoubleArray_h
+
+float* double_array(float* array, int length);
+
+#endif /* DoubleArray_h */
+
 

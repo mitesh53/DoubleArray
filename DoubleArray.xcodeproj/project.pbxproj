@@ -11,6 +11,8 @@
 		2B84250429A0CE6B00892BAC /* DoubleArray.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8424F929A0CE6B00892BAC /* DoubleArray.framework */; };
 		2B84250929A0CE6B00892BAC /* DoubleArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B84250829A0CE6B00892BAC /* DoubleArrayTests.swift */; };
 		2B84250A29A0CE6B00892BAC /* DoubleArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B8424FC29A0CE6B00892BAC /* DoubleArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B84251429A0CEA100892BAC /* DoubleArray.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B84251329A0CEA100892BAC /* DoubleArray.c */; };
+		2B84251629A0CFDE00892BAC /* DoubleArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B84251529A0CFDE00892BAC /* DoubleArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,9 @@
 		2B8424FD29A0CE6B00892BAC /* DoubleArray.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DoubleArray.docc; sourceTree = "<group>"; };
 		2B84250329A0CE6B00892BAC /* DoubleArrayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleArrayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B84250829A0CE6B00892BAC /* DoubleArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleArrayTests.swift; sourceTree = "<group>"; };
+		2B84251329A0CEA100892BAC /* DoubleArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DoubleArray.c; sourceTree = "<group>"; };
+		2B84251529A0CFDE00892BAC /* DoubleArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleArray.swift; sourceTree = "<group>"; };
+		2B84251829A0D38400892BAC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 				2B8424FB29A0CE6B00892BAC /* DoubleArray */,
 				2B84250729A0CE6B00892BAC /* DoubleArrayTests */,
 				2B8424FA29A0CE6B00892BAC /* Products */,
+				2B84251729A0D38400892BAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +79,8 @@
 			children = (
 				2B8424FC29A0CE6B00892BAC /* DoubleArray.h */,
 				2B8424FD29A0CE6B00892BAC /* DoubleArray.docc */,
+				2B84251329A0CEA100892BAC /* DoubleArray.c */,
+				2B84251529A0CFDE00892BAC /* DoubleArray.swift */,
 			);
 			path = DoubleArray;
 			sourceTree = "<group>";
@@ -83,6 +91,14 @@
 				2B84250829A0CE6B00892BAC /* DoubleArrayTests.swift */,
 			);
 			path = DoubleArrayTests;
+			sourceTree = "<group>";
+		};
+		2B84251729A0D38400892BAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B84251829A0D38400892BAC /* Accelerate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +163,7 @@
 				TargetAttributes = {
 					2B8424F829A0CE6B00892BAC = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					2B84250229A0CE6B00892BAC = {
 						CreatedOnToolsVersion = 14.2;
@@ -194,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B84251629A0CFDE00892BAC /* DoubleArray.swift in Sources */,
+				2B84251429A0CEA100892BAC /* DoubleArray.c in Sources */,
 				2B8424FE29A0CE6B00892BAC /* DoubleArray.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +294,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -340,6 +360,7 @@
 		2B84250E29A0CE6B00892BAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -359,6 +380,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -367,6 +389,7 @@
 		2B84250F29A0CE6B00892BAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -394,6 +417,7 @@
 		2B84251129A0CE6B00892BAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -409,6 +433,7 @@
 		2B84251229A0CE6B00892BAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
